@@ -4,90 +4,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C</title>
+    <title>Contato</title>
 </head>
 
-<script  type="text/javascript">
-    function exibir(){
-        alert( "Formulário enviado com sucesso!")
+<script type="text/javascript">
+    var nome = "", email = "", assunto = "", mensagem = "";
+
+    function dados() {
+        nome = document.getElementById('nome').value;
+        email = document.getElementById('email').value;
+        assunto = document.getElementById('assunto').value;
+        mensagem = document.getElementById('mensagem').value;
     }
-    
+
+    function validar() {
+        dados();
+
+        if (nome == "") {
+            alert("O campo Nome é obrigatório!");
+            return;
+        }
+        if (email == "") {
+            alert("O campo Email é obrigatório!");
+            return;
+        }
+        if (assunto == "") {
+            alert("O campo assunto é obrigatório!");
+            return;
+        }
+        if (mensagem == "") {
+            alert("O campo mensagem é obrigatório!");
+            return;
+        }
+
+        alert("Formulário enviado com sucesso!");
+    }
 </script>
+
+
+</script>
+
 <body background="areia2.jpg">
 
     <h1>
-        <center>Contato</center>
+        <I>
+            <center>Contato</center>
+        </I>
 
     </h1>
     <!-- O formulário em si -->
-   <table  width="50%" align="center" cellpadding="20" cellspacing="0"  >
-    <tr>
-        <td>
-    <form align="center" >
+    <table width="50%" align="center" cellpadding="20" cellspacing="0">
+        <tr>
+            <td>
+                <form align="center">
 
-        <!-- Fieldset para agrupar e dar um visual mais organizado -->
-        <fieldset width="70%" border="0" >
-            <legend>Dados de Contato</legend>
+                    <!-- Fieldset para agrupar e dar um visual mais organizado -->
+                    <fieldset width="70%" border="0">
+                        <legend>Dados de Contato</legend>
 
-            <!-- Tabela para alinhar os campos de forma organizada (simulando um layout) -->
-            <table border="0" cellpadding="5" cellspacing="0" align="center" >
+                        <!-- Tabela para alinhar os campos de forma organizada (simulando um layout) -->
+                        <table border="0" cellpadding="5" cellspacing="0" align="center">
 
-                <!-- Campo Nome -->
-                <tr>
-                    <td>
-                        <label for="nome">Nome Completo:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="nome" name="nome" size="40" required>
-                    </td>
-                </tr>
+                            <!-- Campo Nome -->
+                            <tr>
+                                <td>
+                                    <label for="nome">Nome Completo:</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="nome" name="nome" size="40" required>
+                                </td>
+                            </tr>
 
-                <!-- Campo Email -->
-                <tr>
-                    <td>
-                        <label for="email">E-mail:</label>
-                    </td>
-                    <td>
-                        <input type="email" id="email" name="email" size="40" required>
-                    </td>
-                </tr>
+                            <!-- Campo Email -->
+                            <tr>
+                                <td>
+                                    <label for="email">E-mail:</label>
+                                </td>
+                                <td>
+                                    <input type="email" id="email" name="email" size="40" required>
+                                </td>
+                            </tr>
 
-                <!-- Campo Assunto -->
-                <tr>
-                    <td >
-                        <label for="assunto">Assunto:</label>
-                    </td>
-                    <td>
-                        <input type="text" id="assunto" name="assunto" size="40">
-                    </td>
-                </tr>
+                            <!-- Campo Assunto -->
+                            <tr>
+                                <td>
+                                    <label for="assunto">Assunto:</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="assunto" name="assunto" size="40">
+                                </td>
+                            </tr>
 
-                <!-- Campo Mensagem -->
-                <tr>
-                    <td valign="top">
-                        <label for="mensagem">Mensagem:</label>
-                    </td>
-                    <td>
-                        <textarea id="mensagem" name="mensagem" rows="6" cols="40" required></textarea>
-                    </td>
-                </tr>
+                            <!-- Campo Mensagem -->
+                            <tr>
+                                <td valign="top">
+                                    <label for="mensagem">Mensagem:</label>
+                                </td>
+                                <td>
+                                    <textarea id="mensagem" name="mensagem" rows="6" cols="40" required></textarea>
+                                </td>
+                            </tr>
 
-                <!-- Botão de Envio -->
-                <tr>
-                    <td colspan="2" align="center">
+                            <!-- Botão de Envio -->
+                            <tr>
+                                <td colspan="2" align="center">
 
 
-                        <input type="submit" value="Enviar Mensagem" onclick="exibir()">
-                        <input type="reset" value="Limpar Campos">
-                    </td>
-                </tr>
+                                    <input type="submit" value="Enviar Mensagem" onclick="validar()">
+                                    <input type="reset" value="Limpar Campos">
+                                </td>
+                            </tr>
 
-            </table>
-        </fieldset>
-    </form>
-        </td>
-    </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
     </table>
+
 </body>
 
 </html>
